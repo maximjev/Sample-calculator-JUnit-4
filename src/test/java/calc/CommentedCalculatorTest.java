@@ -1,12 +1,15 @@
-package impl;
+package calc;
 
 import exception.CalculatorException;
+import impl.Calculator;
 import org.junit.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
-public class CalculatorTest {
-
+//Comment associated with class
+public class CommentedCalculatorTest {
+    // SomeComment
 
     private Map<String, Integer> map;
 
@@ -24,7 +27,12 @@ public class CalculatorTest {
     public void destroy() {
         System.out.println("Printing after each test...");
     }
-
+    /*
+    * Some
+    * multiple
+    * line
+    * comment
+    * */
 
     @BeforeClass
     public static void setup() {
@@ -63,8 +71,11 @@ public class CalculatorTest {
 
     @Test
     public void shouldReturnValidResultString() {
-        String expected = "5 + 3 = 8";
-        String value = "5 + 3";
+        String expected = "5 + 3 = 8"; // this is expected
+        String value = "5 + 3"; // this is expression
         Assert.assertEquals("Should be same string representation", expected, calculator.evaluateString(value));
     }
+
+    //Another comment here
+    // and here
 }

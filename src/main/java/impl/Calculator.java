@@ -27,6 +27,20 @@ public class Calculator {
 
     public int evaluate(String expression) {
         String[] tokens = expression.split(" ");
+        int res = calculate(tokens);
+        log(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[2]), res, tokens[1]);
+
+        return res;
+    }
+
+    public String evaluateString(String expression) {
+        String[] tokens = expression.split(" ");
+        int res = calculate(tokens);
+
+        return String.format("%s %s %s = %s", tokens[0], tokens[1], tokens[2], res);
+    }
+
+    private int calculate(String[] tokens) {
         int res;
 
         if (tokens.length != 3) {
@@ -52,9 +66,6 @@ public class Calculator {
             default:
                 throw new CalculatorException("Operation not supported");
         }
-
-        log(a, b, res, tokens[1]);
-
         return res;
     }
 
