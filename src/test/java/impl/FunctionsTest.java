@@ -1,6 +1,6 @@
 package impl;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,28 +9,28 @@ public class FunctionsTest {
 
     private Calculator calculator;
 
-    @BeforeClass
-    private void init() {
+    @Before
+    public void initCalculator() {
         calculator = new Calculator();
     }
 
     @Test
-    private void shouldSum() {
+    public void shouldSum() {
         assertEquals(calculator.sum(5, 6), 11);
     }
 
     @Test
-    private void shouldSub() {
+    public void shouldSub() {
         assertEquals(calculator.sub(10, 5), 5);
     }
 
     @Test
-    private void shouldDivide() {
+    public void shouldDivide() {
         assertEquals(calculator.divide(10, 2), 5);
     }
 
     @Test
-    private void shouldMultiply() {
+    public void shouldMultiply() {
         assertEquals(calculator.multiply(10, 10), 100);
     }
 }

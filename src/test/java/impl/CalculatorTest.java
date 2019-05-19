@@ -7,7 +7,6 @@ import java.util.*;
 
 public class CalculatorTest {
 
-
     private Map<String, Integer> map;
 
     private Calculator calculator;
