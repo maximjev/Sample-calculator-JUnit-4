@@ -57,6 +57,7 @@ public class CalculatorTest {
 
     @Test(expected = CalculatorException.class)
     public void shouldThrowWhenInvalidArgument() {
+        System.out.println("Statement for lambda with brackets");
         calculator.evaluate("5 + 3 + 6");
     }
 
