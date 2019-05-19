@@ -35,7 +35,7 @@ public class CalculatorTest {
         System.out.println("Finishing Calculator tests...");
     }
 
-    @Test(timeout = 5, expected = CalculatorException.class)
+    @Test(expected = CalculatorException.class)
     public void shouldThrowOnDivisionByZero() {
         calculator.evaluate("5 / 0");
     }
